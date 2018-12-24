@@ -12,10 +12,11 @@ export class AppComponent {
   posts: any;
 
 
-  constructor(private http: HttpClient) {}
-
-  getPosts() {
+  constructor(private http: HttpClient) {
     this.posts = this.http.get(this.ROOT_URL);
-    
   }
+
+  // getPosts() {
+  //   this.posts = this.http.get(this.ROOT_URL);
+  // }
 }
