@@ -1,0 +1,24 @@
+
+/* Projects Style */
+
+#gallery {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 50px;
+}
+
+#gallery .masonry {
+  position: relative;
+  width: 100%;
+}
+
+#gallery .masonry .item img {
+  transition: all 1s;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#projects .masonry .item img:hover {
+  opacity: 0.5;
+}

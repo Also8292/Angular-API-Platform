@@ -1,0 +1,135 @@
+
+#projects {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #eee;
+}
+
+#projects .section-heading {
+  margin-right: 20%;
+}
+
+#projects .content-section {
+  display: inline-block;
+  position: relative;
+}
+
+#projects .owl-dots {
+  margin-top: 40px;
+}
+
+#projects .owl-dots .owl-dot span  {
+  width: 12px;
+  height: 12px;
+  background-color: #cdcdcd!important;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+#projects .owl-dots .active span {
+  background-color: #002e6e!important;
+}
+
+#projects .owl-dots button {
+  outline: none;
+}
+
+#projects .owl-nav {
+  position: absolute;
+  display: inline-block;
+  top: -110px;
+  right: 0;
+}
+
+#projects .owl-nav button:focus {
+  outline: none;
+}
+
+#projects .owl-nav .owl-prev span {
+  margin-right: 10px;
+}
+
+#projects .owl-nav .owl-next span, #projects .owl-nav .owl-prev span {
+  outline: none;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  background-color: #eee;
+  color: #232323;
+  font-size: 42px;
+  transition: all 0.5s;
+}
+
+#projects .owl-nav span:hover {
+  background-color: #002e6e;
+  color: #fff;
+}
+
+#projects .item {
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+#projects .item .image {
+  position: relative;
+}
+
+#projects .item .image img {
+  width: 100%;
+  overflow: hidden;
+}
+
+#projects .item .image .featured-button a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: rgba(0, 46, 110, 0.9);
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 9;
+  bottom: -44px;
+  opacity: 0;
+}
+
+#projects .item:hover .featured-button a {
+  bottom: 0;
+  opacity: 1;
+}
+
+#projects .item .text-content {
+  padding-top: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+#projects .item .text-content h4 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #232323;
+  letter-spacing: 0.5px;
+}
+
+#projects .item .text-content span {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7a7a7a;
+  letter-spacing: 0.5px;
+  margin-bottom: 12.5px;
+}
