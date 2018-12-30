@@ -1,5 +1,5 @@
 
-/* Projects Style */
+/* Gallery Style */
 
 #gallery {
   padding-left: 60px;
@@ -19,6 +19,13 @@
   margin-bottom: 30px;
 }
 
-#projects .masonry .item img:hover {
+#gallery .masonry .item img:hover {
   opacity: 0.5;
+}
+
+.gallery-row {
+  display: block;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }

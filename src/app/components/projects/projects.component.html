@@ -1,13 +1,12 @@
-<div *ngFor="let project of projects | async" class="container">
+<!-- <div *ngFor="let project of projects | async" class="container">
 
   <h1>{{ project.title  }}</h1>
   <p>{{ project.duration }}</p>
   <p>{{ project.description  }}</p>
-  <p>{{ project.images }}</p>
-  <!-- <p>{{ project.images }}</p> -->
-  <!-- <img src="{{ getImage(project.images) }}" alt="Aquila Image"> -->
+  <p>{{ project.image }}</p>
+  <img src="{{ getImage(project.image) }}" alt="Aquila Image">
   
-</div>
+</div> -->
 
 <section id="projects" class="content-section">
   <div class="section-heading">
@@ -15,176 +14,132 @@
     <p>Réalisations, projets personnels et professionnel
       <br>sur lesquels j'ai travaillé.</p>
   </div>
-  <div class="section-content">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_1.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
+
+  <div class="row">
+
+    <div *ngFor="let project of projects | async" class="col-md-4" style="height: 400px; padding: 5px; overflow: hidden;">
+      <div class="project-content" style="width: 100%;">
+        <a href="#accueil">
+          <img src="{{ getImage(project.image) }}" class="responsive" alt="" style="width: 100%; height: 200px;">
+          <div class="container project-desc">
+            <h1>{{ project.title }}</h1>
+            <p>{{ project.description }}</p>
           </div>
-        </div>
-        <div class="text-content">
-          <h4>Lorem ipsum dolor</h4>
-          <span>Proin et sapien</span>
-          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
-            commercial or non-commercial or educational purposes.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_1.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Lorem ipsum dolor</h4>
-          <span>Proin et sapien</span>
-          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
-            commercial or non-commercial or educational purposes.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_1.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Lorem ipsum dolor</h4>
-          <span>Proin et sapien</span>
-          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
-            commercial or non-commercial or educational purposes.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_1.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Lorem ipsum dolor</h4>
-          <span>Proin et sapien</span>
-          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
-            commercial or non-commercial or educational purposes.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_2.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Phasellus a lacus ac odio</h4>
-          <span>Maximus</span>
-          <p>#2 You are NOT allowed to re-distribute this on any template website. However, you can put a screenshot of
-            the template and a link back to original template page. Thank you.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_3.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Proin sit amet fringilla</h4>
-          <span>Vulputate</span>
-          <p>#3 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse libero lacus, accumsan vitae commodo
-            tristique, luctus gravida metus.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_2.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>In volutpat augue lectus</h4>
-          <span>Elementum</span>
-          <p>#4 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse libero lacus, accumsan vitae commodo
-            tristique, luctus gravida metus.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_1.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Cras commodo odio</h4>
-          <span>Aliquam</span>
-          <p>#5 Mauris lacinia pretium libero, ut tincidunt lacus molestie ornare. Phasellus a facilisis erat. Praesent
-            eleifend nibh mauris, quis sodales lorem convallis pulvinar.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_3.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Sed at massa turpis</h4>
-          <span>Curabitur</span>
-          <p>#6 Vestibulum tincidunt ornare ligula vel molestie. Curabitur hendrerit mauris mollis ipsum vulputate
-            rutrum. Phasellus luctus odio eget dui imperdiet.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_2.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Aliquam mollis lacus</h4>
-          <span>Suspendisse</span>
-          <p>#7 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam,
-            nec hendrerit purus pharetra in.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_1.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Mauris lacinia pretium</h4>
-          <span>Vestibulum</span>
-          <p>#8 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam,
-            nec hendrerit purus pharetra in.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="image">
-          <img src="assets/images/img/featured_3.jpg" alt="">
-          <div class="featured-button button">
-            <a href="#projects">Description</a>
-          </div>
-        </div>
-        <div class="text-content">
-          <h4>Proin sit amet fringilla erat</h4>
-          <span>Convallis</span>
-          <p>#9 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam,
-            nec hendrerit purus pharetra in.</p>
-        </div>
+        </a>
       </div>
     </div>
+
+    <!-- <div class="col-md-4" style="height: 400px; padding: 5px;">
+      <div style="background-color: #222; width: 100%; height: 100%;">
+        <img src="assets/images/tigre1.jpg" class="responsive" alt="" style="width: 100%;">
+      </div>
+    </div>
+
+    <div class="col-md-4" style="height: 400px; padding: 5px;">
+      <div style="background-color: #222; width: 100%; height: 100%;">
+        <img src="assets/images/tigre1.jpg" class="responsive" alt="" style="width: 100%;">
+      </div>
+    </div>
+
+    <div class="col-md-4" style="height: 400px; padding: 5px;">
+      <div style="background-color: #222; width: 100%; height: 100%;">
+        <img src="assets/images/tigre1.jpg" class="responsive" alt="" style="width: 100%;">
+      </div>
+    </div>
+    
+    <div class="col-md-4" style="height: 400px; padding: 5px;">
+      <div style="background-color: #222; width: 100%; height: 100%;">
+        <img src="assets/images/tigre1.jpg" class="responsive" alt="" style="width: 100%;">
+      </div>
+    </div>
+    
+    <div class="col-md-4" style="height: 400px; padding: 5px;">
+      <div style="background-color: #222; width: 100%; height: 100%;">
+        <img src="assets/images/tigre1.jpg" class="responsive" alt="" style="width: 100%;">
+      </div>
+    </div> -->
+
   </div>
 </section>
+
+
+<!-- <div class="owl-carousel owl-theme">
+
+      <div *ngFor="let project of projects | async" class="item" >
+        <div class="image">
+          <img src="{{ getImage(project.image) }}" alt="{{ project.title }}">
+          <div class="featured-button button">
+            <a href="#projects">Description</a>
+          </div>
+        </div>
+        <div class="text-content">
+          <h4>{{ project.title }}</h4>
+          <span>Réalisé en {{ project.duration }} jours</span>
+          <p>{{ project.description }}</p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="image">
+          <img src="assets/images/lion1.jpg" alt="">
+          <div class="featured-button button">
+            <a href="#projects">Description</a>
+          </div>
+        </div>
+        <div class="text-content">
+          <h4>Lorem ipsum dolor</h4>
+          <span>Proin et sapien</span>
+          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
+            commercial or non-commercial or educational purposes.</p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="image">
+          <img src="assets/images/tigre1.jpg" alt="">
+          <div class="featured-button button">
+            <a href="#projects">Description</a>
+          </div>
+        </div>
+        <div class="text-content">
+          <h4>Lorem ipsum dolor</h4>
+          <span>Proin et sapien</span>
+          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
+            commercial or non-commercial or educational purposes.</p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="image">
+          <img src="assets/images/lion2.jpg" alt="">
+          <div class="featured-button button">
+            <a href="#projects">Description</a>
+          </div>
+        </div>
+        <div class="text-content">
+          <h4>Lorem ipsum dolor</h4>
+          <span>Proin et sapien</span>
+          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
+            commercial or non-commercial or educational purposes.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="image">
+          <img src="assets/images/tigre2.jpg" alt="">
+          <div class="featured-button button">
+            <a href="#projects">Description</a>
+          </div>
+        </div>
+        <div class="text-content">
+          <h4>Lorem ipsum dolor</h4>
+          <span>Proin et sapien</span>
+          <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for
+            commercial or non-commercial or educational purposes.</p>
+        </div>
+      </div>
+
+
+
+
+    </div> -->

@@ -1,3 +1,15 @@
+<!-- <div *ngFor="let project of projects | async" class="container">
+
+  <h1>{{ project.title  }}</h1>
+  <p>{{ project.duration }}</p>
+  <p>{{ project.description  }}</p>
+  <p>{{ project.image }}</p>
+  <img src="{{ getImage(project.image) }}" alt="Aquila Image">
+  
+</div> -->
+
+
+
 <section id="blog" class="content-section">
   <div class="section-heading">
     <h1>Blog<br><em>also</em></h1>
@@ -16,54 +28,25 @@
         <section id="first-tab-group" class="tabgroup">
           <div id="tab1">
             <ul>
-              <li>
+
+              <li *ngFor="let article of articles | async">
                 <div class="item">
-                  <img src="assets/images/img/blog_1.jpg" alt="">
+                  <img src="{{ getImage(article.image) }}" alt="">
                   <div class="text-content">
-                    <h4>Integer ultrices augue</h4>
-                    <span>25 July 2018</span>
+                    <a href="#blog">
+                      <h4>{{ article.title }}</h4>
+                    </a>
+                    <span>{{ article.publicationDate | date: "dd MMM y" }}</span>
                     <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu
                       dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis
                       lorem quis ipsum maximus finibus.</p>
-
-                    <div class="accent-button button">
+                    <!-- <div class="accent-button button">
                       <a href="#contact">Lire ...</a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="item">
-                  <img src="assets/images/img/blog_2.jpg" alt="">
-                  <div class="text-content">
-                    <h4>Cras commodo odio ut</h4>
-                    <span>16 July 2018</span>
-                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu
-                      dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis
-                      lorem quis ipsum maximus finibus.</p>
 
-                    <div class="accent-button button">
-                      <a href="#contact">Lire ...</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="item">
-                  <img src="assets/images/img/blog_3.jpg" alt="">
-                  <div class="text-content">
-                    <h4>Sed at massa turpis</h4>
-                    <span>10 July 2018</span>
-                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu
-                      dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis
-                      lorem quis ipsum maximus finibus.</p>
-
-                    <div class="accent-button button">
-                      <a href="#contact">Lire ...</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
             </ul>
           </div>
           <div id="tab2">

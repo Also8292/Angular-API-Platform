@@ -19,7 +19,7 @@
   display: inline-block;
   text-align: center;
   width: 25%;
-  float: left;
+  /* float: left; */
   margin: 0;
   padding: 0;
 }
@@ -98,9 +98,10 @@
   margin-bottom: 5px;
   font-size: 21px;
   font-weight: 600;
-  color: #232323;
+  color: #002e6e;
   letter-spacing: 0.5px;
 }
+
 
 #blog .item .text-content span {
   display: inline-block;

@@ -11,10 +11,12 @@ export class ProjectsComponent {
   readonly ROOT_URL = "http://127.0.0.1:8000/api/projects.json/";
   projects: any;
 
-
   constructor(private http: HttpClient) {
     this.projects = this.http.get(this.ROOT_URL);
   }
 
+  getImage (imageName) {
+    return 'http://127.0.0.1:8000/images/projects/' + imageName;
+  }
 
 }
