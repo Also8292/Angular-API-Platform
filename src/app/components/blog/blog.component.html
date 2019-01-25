@@ -20,15 +20,14 @@
     <div class="tabs-content">
       <div class="wrapper">
         <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-          <li><a href="#tab1" class="active">Blog</a></li>
-          <li><a href="#tab2">Ateliers</a></li>
-          <li><a href="#tab3">Veille</a></li>
-          <li><a href="#tab4">Truc | Astuce</a></li>
+          <li><a href="#tab1" class="active">Derniers articles</a></li>
+          <li><a href="#tab2">Tous les articles</a></li>
+          <li><a href="#tab3"></a></li>
+          <li><a href="#tab4"></a></li>
         </ul>
         <section id="first-tab-group" class="tabgroup">
           <div id="tab1">
             <ul>
-
               <li *ngFor="let article of articles | async">
                 <div class="item">
                   <img src="{{ getImage(article.image) }}" alt="">
@@ -51,7 +50,7 @@
           </div>
           <div id="tab2">
             <ul>
-              <li>
+              <!-- <li>
                 <div class="item">
                   <img src="assets/images/img/blog_3.jpg" alt="">
                   <div class="text-content">
@@ -98,10 +97,10 @@
                     </div>
                   </div>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </div>
-          <div id="tab3">
+          <!-- <div id="tab3">
             <ul>
               <li>
                 <div class="item">
@@ -204,7 +203,7 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </div> -->
         </section>
       </div>
     </div>
